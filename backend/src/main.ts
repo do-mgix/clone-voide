@@ -10,7 +10,18 @@ import { FirebaseAuthGuard } from './auth/guards/firebase-auth.guard';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors({
-    origin: ['http://localhost:5173', 'https://shopstore-b1e03.web.app', 'https://voide.up.railway.app'],
+    origin: (origin, callback) => {
+      if (
+        !origin ||
+        origin === 'http://localhost:5173' ||
+        origin.endsWith('.web.app') ||
+        origin.endsWith('.railway.app')
+      ) {
+        callback(null, true);
+      } else {
+        callback(null, false);
+      }
+    },
     credentials: true,
   });
   app.use(cookieParser());
