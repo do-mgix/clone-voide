@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Dots&display=swap');
+
+/* ── Light mode (default) ───────────────────────────── */
+:root {
+  --bg-page:        #f7f7f5;
+  --bg-card:        #ffffff;
+  --bg-section:     #f2f2f0;
+  --bg-section-alt: #eeeeec;
+  --bg-nav:         rgba(247, 247, 245, 0.95);
+  --bg-footer:      #111111;
+
+  --surface-1: #ffffff;
+  --surface-2: #e8e8e6;
+
+  --text-primary:   #111111;
+  --text-secondary: #444444;
+  --text-muted:     #888888;
+
+  --border-subtle:  #e0e0de;
+  --border-default: #c8c8c6;
+  --border-strong:  #a0a09e;
+
+  --accent:       #111111;
+  --accent-muted: #555555;
+  --accent-dim:   #999999;
+
+  --color-danger:  #c0392b;
+  --color-success: #27ae60;
+  --color-page-bg: var(--bg-page);
+  --border-radius-md: 12px;
+
+  --cream:         var(--bg-section);
+  --white:         var(--surface-1);
+  --sand:          var(--bg-section);
+  --card-bg:       var(--bg-card);
+  --section-alt:   var(--bg-section-alt);
+  --nav-bg:        var(--bg-nav);
+  --footer-bg:     var(--bg-footer);
+  --green-deep:    var(--accent);
+  --green-mid:     #333333;
+  --green-soft:    var(--accent-muted);
+  --green-pale:    var(--border-strong);
+  --green-mist:    var(--accent-dim);
+  --green-foam:    var(--surface-2);
+  --text-dark:     var(--text-primary);
+  --text-mid:      var(--text-secondary);
+  --text-light:    var(--text-muted);
+  --page-bg:       var(--bg-page);
+  --test-bg:       var(--bg-page);
+  --test-card-bg:  var(--surface-1);
+  --color-text-primary:    var(--text-primary);
+  --color-text-secondary:  var(--text-secondary);
+  --color-border-tertiary: var(--border-subtle);
+}
+
+/* ── Dark mode ──────────────────────────────────────── */
+html.dark {
+  --bg-page:        #020202;
+  --bg-card:        #050505;
+  --bg-section:     #030303;
+  --bg-section-alt: #030303;
+  --bg-nav:         rgba(0, 0, 0, 0.95);
+  --bg-footer:      #010101;
+
+  --surface-1: #0d0d0d;
+  --surface-2: #1a1a1a;
+
+  --text-primary:   #f7f7f7;
+  --text-secondary: #bbbbbb;
+  --text-muted:     #909090;
+
+  --border-subtle:  #3a3a3a;
+  --border-default: #5f5f5f;
+  --border-strong:  #8a8a8a;
+
+  --accent:       #f8f8f8;
+  --accent-muted: #a7a7a7;
+  --accent-dim:   #6b6b6b;
+
+  --color-danger:  #c0392b;
+  --color-success: #27ae60;
+
+  --green-mid: #cfcfcf;
+}
+
+.tomorrow-thin {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.tomorrow-extralight {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.tomorrow-light {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.tomorrow-regular {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tomorrow-medium {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.tomorrow-semibold {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.tomorrow-bold {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.tomorrow-extrabold {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.tomorrow-black {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.tomorrow-thin-italic {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.tomorrow-extralight-italic {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.tomorrow-light-italic {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.tomorrow-regular-italic {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.tomorrow-medium-italic {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.tomorrow-semibold-italic {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.tomorrow-bold-italic {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.tomorrow-extrabold-italic {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.tomorrow-black-italic {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.zen-dots {
+  font-family: "Zen Dots", cursive;
+}
