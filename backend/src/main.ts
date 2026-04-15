@@ -41,7 +41,7 @@ async function bootstrap() {
   const firebaseGuard = app.get(FirebaseAuthGuard);
   app.useGlobalGuards(firebaseGuard);
 
-  await app.listen(process.env.PORT ?? 3333);
+  await app.listen(process.env.PORT ?? 3333, '0.0.0.0');
 }
 
 bootstrap();
