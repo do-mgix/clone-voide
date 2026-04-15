@@ -2,12 +2,14 @@
   "name": "shopstore-backend",
   "version": "1.0.0",
   "private": true,
+  "main": "dist/firebase-function.js",
   "scripts": {
     "start": "node dist/main.js",
     "start:dev": "ts-node-dev --respawn --transpile-only src/main.ts",
     "build": "tsc",
     "prisma:generate": "prisma generate",
-    "prisma:migrate": "prisma migrate dev"
+    "prisma:migrate": "prisma migrate dev",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@nestjs/common": "^11.0.0",
@@ -20,6 +22,7 @@
     "cloudinary": "^2.9.0",
     "cookie-parser": "^1.4.6",
     "firebase-admin": "^13.8.0",
+    "firebase-functions": "^6.6.0",
     "mercadopago": "^2.12.0",
     "prisma": "^5.0.0",
     "reflect-metadata": "^0.1.13",

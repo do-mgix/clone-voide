@@ -14,6 +14,7 @@ async function bootstrap() {
       if (
         !origin ||
         origin === 'http://localhost:5173' ||
+        origin === 'https://voide.up.railway.app' ||
         origin.endsWith('.web.app') ||
         origin.endsWith('.railway.app')
       ) {
