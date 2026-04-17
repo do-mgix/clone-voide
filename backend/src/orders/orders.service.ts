@@ -66,15 +66,17 @@ export class OrdersService {
 
     await this.prisma.cartItem.deleteMany({ where: { cartId: cart.id } });
 
-    const { preferenceId, checkoutUrl } = await this.payments.createPreference({
-      id: order.id,
+    const { sessionId, checkoutUrl } = await this.payments.createCheckoutSession({
+      orderId: order.id,
       items: order.items,
       payerEmail: userEmail,
+      paymentMethod: dto.paymentMethod,
+      shippingPriceCents: shippingCents,
     });
 
     await this.prisma.order.update({
       where: { id: order.id },
-      data: { preferenceId },
+      data: { preferenceId: sessionId },
     });
 
     return { order, checkoutUrl };
