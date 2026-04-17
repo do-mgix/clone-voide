@@ -153,6 +153,29 @@ export function initCheckoutPage() {
     updateSummaryTotals();
   }
 
+  async function fetchAddressByCep(zip) {
+    try {
+      const res = await fetch(`https://viacep.com.br/ws/${zip}/json/`);
+      if (!res.ok) return;
+      const data = await res.json();
+      if (data.erro) return;
+
+      const fields = {
+        street: data.logradouro,
+        neighborhood: data.bairro,
+        city: data.localidade,
+        state: data.uf,
+      };
+      for (const [id, value] of Object.entries(fields)) {
+        if (!value) continue;
+        const el = document.getElementById(id);
+        if (el) el.value = value;
+      }
+    } catch {
+      // ViaCEP offline — user keeps typing manually
+    }
+  }
+
   // Debounce ZIP input (trigger on 8 digits)
   let zipTimer;
   zipInput?.addEventListener('input', (e) => {
@@ -161,7 +184,10 @@ export function initCheckoutPage() {
     if (val.length === 8) e.target.value = `${val.slice(0, 5)}-${val.slice(5)}`;
     clearTimeout(zipTimer);
     if (val.length === 8) {
-      zipTimer = setTimeout(() => fetchShippingQuotes(val), 400);
+      zipTimer = setTimeout(() => {
+        fetchAddressByCep(val);
+        fetchShippingQuotes(val);
+      }, 400);
     }
   });
 
