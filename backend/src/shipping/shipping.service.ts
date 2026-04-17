@@ -17,6 +17,21 @@ const ITEM_HEIGHT = 12;
 const ITEM_LENGTH = 20;
 const ITEM_WEIGHT = 0.4;
 
+// CEPs served by in-person local delivery (free of charge)
+const LOCAL_DELIVERY_CEPS = new Set<string>([
+  '32183025',
+]);
+
+const LOCAL_DELIVERY_OPTION: ShippingOption = {
+  id: 0,
+  name: 'Entrega local',
+  company: 'Voide',
+  logo: '',
+  priceCents: 0,
+  deadline: 1,
+  error: null,
+};
+
 @Injectable()
 export class ShippingService {
   private readonly logger = new Logger(ShippingService.name);
@@ -31,6 +46,11 @@ export class ShippingService {
   }
 
   async calculate(toZip: string, totalItems: number, insuranceValue: number): Promise<ShippingOption[]> {
+    const normalizedZip = toZip.replace(/\D/g, '');
+    if (LOCAL_DELIVERY_CEPS.has(normalizedZip)) {
+      return [LOCAL_DELIVERY_OPTION];
+    }
+
     const token = this.config.get<string>('MELHORENVIO_TOKEN');
     const fromZip = this.config.get<string>('MELHORENVIO_FROM_ZIP') ?? '01310100';
     const appEmail = this.config.get<string>('MELHORENVIO_APP_EMAIL') ?? 'app@shopstore.com';
