@@ -8,7 +8,7 @@ import { AppModule } from './app.module';
 import { FirebaseAuthGuard } from './auth/guards/firebase-auth.guard';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create(AppModule, { rawBody: true });
   app.enableCors({
     origin: ['http://localhost:5173', 'https://shopstore-b1e03.web.app'],
     credentials: true,

@@ -1,67 +1,83 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import { MercadoPagoConfig, Preference, Payment } from 'mercadopago';
+import Stripe from 'stripe';
+
+type CheckoutItem = {
+  productName: string;
+  productEmoji: string;
+  priceInCents: number;
+  quantity: number;
+};
+
+type CreateCheckoutSessionInput = {
+  orderId: string;
+  items: CheckoutItem[];
+  payerEmail: string;
+  paymentMethod: 'pix' | 'credit_card' | 'boleto';
+  shippingPriceCents?: number;
+};
+
+const PAYMENT_METHOD_MAP: Record<
+  CreateCheckoutSessionInput['paymentMethod'],
+  Stripe.Checkout.SessionCreateParams.PaymentMethodType[]
+> = {
+  credit_card: ['card'],
+  pix: ['pix' as Stripe.Checkout.SessionCreateParams.PaymentMethodType],
+  boleto: ['boleto' as Stripe.Checkout.SessionCreateParams.PaymentMethodType],
+};
 
 @Injectable()
 export class PaymentsService {
-  private readonly client: MercadoPagoConfig;
+  private readonly stripe: Stripe;
   private readonly logger = new Logger(PaymentsService.name);
 
   constructor(private readonly config: ConfigService) {
-    this.client = new MercadoPagoConfig({
-      accessToken: this.config.get<string>('MERCADOPAGO_ACCESS_TOKEN') ?? '',
-    });
+    this.stripe = new Stripe(this.config.get<string>('STRIPE_SECRET_KEY') ?? '');
   }
 
-  private get isSandbox() {
-    const token = this.config.get<string>('MERCADOPAGO_ACCESS_TOKEN') ?? '';
-    return token.startsWith('TEST-');
-  }
-
-  async createPreference(order: {
-    id: string;
-    items: { productName: string; productEmoji: string; priceInCents: number; quantity: number }[];
-    payerEmail: string;
-  }) {
+  async createCheckoutSession(input: CreateCheckoutSessionInput) {
     const appUrl = this.config.get<string>('APP_URL') ?? 'http://localhost:5173';
-    const backendUrl = this.config.get<string>('BACKEND_URL') ?? '';
-    const ordersPage =
-      `${appUrl}/src/modules/orders/presentation/orders.html`;
+    const ordersPage = `${appUrl}/src/modules/orders/presentation/orders.html`;
 
-    const preference = new Preference(this.client);
-    const response = await preference.create({
-      body: {
-        external_reference: order.id,
-        items: order.items.map((item) => ({
-          id: item.productName,
-          title: `${item.productEmoji} ${item.productName}`,
-          quantity: item.quantity,
-          unit_price: item.priceInCents / 100,
-          currency_id: 'BRL',
-        })),
-        payer: { email: order.payerEmail },
-        back_urls: {
-          success: `${ordersPage}?payment=success&orderId=${order.id}`,
-          pending: `${ordersPage}?payment=pending&orderId=${order.id}`,
-          failure: `${ordersPage}?payment=failure&orderId=${order.id}`,
+    const lineItems: Stripe.Checkout.SessionCreateParams.LineItem[] = input.items.map((item) => ({
+      quantity: item.quantity,
+      price_data: {
+        currency: 'brl',
+        unit_amount: item.priceInCents,
+        product_data: {
+          name: `${item.productEmoji} ${item.productName}`.trim(),
         },
-        auto_return: 'approved',
-        ...(backendUrl && {
-          notification_url: `${backendUrl}/payments/webhook`,
-        }),
       },
+    }));
+
+    if (input.shippingPriceCents && input.shippingPriceCents > 0) {
+      lineItems.push({
+        quantity: 1,
+        price_data: {
+          currency: 'brl',
+          unit_amount: input.shippingPriceCents,
+          product_data: { name: 'Frete' },
+        },
+      });
+    }
+
+    const session = await this.stripe.checkout.sessions.create({
+      mode: 'payment',
+      payment_method_types: PAYMENT_METHOD_MAP[input.paymentMethod] ?? ['card'],
+      line_items: lineItems,
+      client_reference_id: input.orderId,
+      customer_email: input.payerEmail,
+      success_url: `${ordersPage}?payment=success&orderId=${input.orderId}&session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${ordersPage}?payment=failure&orderId=${input.orderId}`,
+      metadata: { orderId: input.orderId },
     });
 
-    const checkoutUrl = this.isSandbox
-      ? response.sandbox_init_point
-      : response.init_point;
-
-    this.logger.log(`Preference created: ${response.id} → ${checkoutUrl}`);
-    return { preferenceId: response.id!, checkoutUrl: checkoutUrl! };
+    this.logger.log(`Stripe Checkout Session created: ${session.id} → ${session.url}`);
+    return { sessionId: session.id, checkoutUrl: session.url ?? '' };
   }
 
-  async getPaymentById(paymentId: string) {
-    const payment = new Payment(this.client);
-    return payment.get({ id: paymentId });
+  constructEvent(payload: Buffer, signature: string) {
+    const secret = this.config.get<string>('STRIPE_WEBHOOK_SECRET') ?? '';
+    return this.stripe.webhooks.constructEvent(payload, signature, secret);
   }
 }
