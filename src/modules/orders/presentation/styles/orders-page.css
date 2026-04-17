@@ -1,0 +1,224 @@
+.orders-page {
+  padding-top: 72px;
+  min-height: 100vh;
+}
+
+.orders-header {
+  padding: 48px 80px 32px;
+  border-bottom: 1px solid var(--green-pale);
+}
+
+.orders-header h1 {
+  font-family: 'Tomorrow', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 300;
+  color: var(--green-deep);
+}
+
+.orders-header p {
+  font-size: 0.88rem;
+  color: var(--text-light);
+  margin-top: 6px;
+}
+
+.orders-container {
+  padding: 48px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 900px;
+}
+
+/* ── Order card ──────────────────────────────── */
+
+.order-card {
+  background: var(--card-bg);
+  border: 1px solid var(--green-pale);
+  border-radius: 20px;
+  overflow: hidden;
+  animation: fadeUp 0.35s ease both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.order-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid var(--green-pale);
+}
+
+.order-card-id {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.order-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-light);
+}
+
+.order-num {
+  font-family: 'Tomorrow', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* ── Status chips ───────────────────────────── */
+
+.order-status {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 12px;
+  border-radius: 100px;
+  background: var(--surface-2);
+  color: var(--text-mid);
+}
+
+.status--pending    { background: #2a2010; color: #d4a44a; }
+.status--confirmed  { background: #1a2e1a; color: #6fcf6f; }
+.status--processing { background: #2a2a10; color: #d4c44a; }
+.status--shipped    { background: #102030; color: #5ab5d4; }
+.status--delivered  { background: #1a3a1a; color: #4dc96e; }
+.status--cancelled  { background: #2e1a1a; color: #d46f6f; }
+
+/* ── Card body ───────────────────────────────── */
+
+.order-card-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  gap: 16px;
+}
+
+.order-thumbs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.order-item-thumb {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.order-item-thumb--photo {
+  object-fit: cover;
+}
+
+.order-item-extra {
+  background: var(--surface-2);
+  color: var(--text-mid);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.order-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.order-date {
+  font-size: 0.82rem;
+  color: var(--text-mid);
+}
+
+.order-payment {
+  font-size: 0.78rem;
+  color: var(--text-light);
+}
+
+/* ── Card footer ─────────────────────────────── */
+
+.order-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  border-top: 1px solid var(--green-pale);
+  background: var(--surface-1);
+}
+
+.order-items-count {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.order-total {
+  font-family: 'Tomorrow', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--green-deep);
+}
+
+/* ── Empty & loading ─────────────────────────── */
+
+.orders-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 0;
+  gap: 20px;
+  color: var(--text-light);
+}
+
+.orders-empty-icon {
+  font-size: 4rem;
+}
+
+.orders-empty h3 {
+  font-family: 'Tomorrow', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: var(--text-mid);
+}
+
+.orders-empty p {
+  font-size: 0.9rem;
+}
+
+.orders-loading {
+  text-align: center;
+  color: var(--text-light);
+  padding: 60px 0;
+  font-size: 0.9rem;
+}
+
+/* ── Responsive ──────────────────────────────── */
+
+@media (max-width: 1024px) {
+  .orders-header    { padding: 36px 40px 24px; }
+  .orders-container { padding: 36px 40px; }
+}
+
+@media (max-width: 768px) {
+  .orders-header    { padding: 24px 20px 16px; }
+  .orders-header h1 { font-size: 2rem; }
+  .orders-container { padding: 24px 20px; }
+  .order-card-body  { flex-direction: column; align-items: flex-start; }
+  .order-meta       { align-items: flex-start; }
+}
+
+@media (max-width: 480px) {
+  .orders-header    { padding: 20px 16px 14px; }
+  .orders-container { padding: 20px 16px; }
+}
