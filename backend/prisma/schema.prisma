@@ -93,7 +93,6 @@ model Product {
   rating          Float    @default(0)
   reviews         Int      @default(0)
   imageUrl        String?
-  images          String[] @default([])
   createdAt       DateTime @default(now())
   updatedAt       DateTime @updatedAt
   cartItems       CartItem[]
