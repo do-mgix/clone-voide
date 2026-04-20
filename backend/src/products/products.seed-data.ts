@@ -14,7 +14,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260305-WA0006.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260305-WA0006.jpg',
   },
   {
     id: 'ropa-002',
@@ -31,7 +31,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260311-WA0055.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260311-WA0055.jpg',
   },
   {
     id: 'ropa-003',
@@ -48,7 +48,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260312-WA0006.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260312-WA0006.jpg',
   },
   {
     id: 'ropa-004',
@@ -65,7 +65,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260331-WA0002.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260331-WA0002.jpg',
   },
   {
     id: 'ropa-005',
@@ -82,7 +82,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260331-WA0003.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260331-WA0003.jpg',
   },
   {
     id: 'ropa-006',
@@ -99,7 +99,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260331-WA0004.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260331-WA0004.jpg',
   },
   {
     id: 'ropa-007',
@@ -116,7 +116,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260331-WA0005.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260331-WA0005.jpg',
   },
   {
     id: 'ropa-008',
@@ -133,7 +133,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260331-WA0006.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260331-WA0006.jpg',
   },
   {
     id: 'ropa-009',
@@ -150,7 +150,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260331-WA0008.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260331-WA0008.jpg',
   },
   {
     id: 'ropa-010',
@@ -167,7 +167,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260331-WA0009.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260331-WA0009.jpg',
   },
   {
     id: 'ropa-011',
@@ -184,7 +184,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260331-WA0010.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260331-WA0010.jpg',
   },
   {
     id: 'ropa-012',
@@ -201,7 +201,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260331-WA0011.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260331-WA0011.jpg',
   },
   {
     id: 'ropa-013',
@@ -218,7 +218,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260331-WA0012.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260331-WA0012.jpg',
   },
   {
     id: 'ropa-014',
@@ -235,7 +235,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260331-WA0013.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260331-WA0013.jpg',
   },
   {
     id: 'ropa-015',
@@ -252,7 +252,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260331-WA0014.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260331-WA0014.jpg',
   },
   {
     id: 'ropa-016',
@@ -269,7 +269,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260331-WA0015.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260331-WA0015.jpg',
   },
   {
     id: 'ropa-017',
@@ -286,7 +286,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260331-WA0016.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260331-WA0016.jpg',
   },
   {
     id: 'ropa-018',
@@ -303,7 +303,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260331-WA0020.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260331-WA0020.jpg',
   },
   {
     id: 'ropa-019',
@@ -320,7 +320,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260331-WA0021.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260331-WA0021.jpg',
   },
   {
     id: 'ropa-020',
@@ -337,7 +337,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260331-WA0022.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260331-WA0022.jpg',
   },
   {
     id: 'ropa-021',
@@ -354,7 +354,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260331-WA0023.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260331-WA0023.jpg',
   },
   {
     id: 'ropa-022',
@@ -371,7 +371,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260331-WA0024.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260331-WA0024.jpg',
   },
   {
     id: 'ropa-023',
@@ -388,7 +388,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260401-WA0044.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260401-WA0044.jpg',
   },
   {
     id: 'ropa-024',
@@ -405,7 +405,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260402-WA0004.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260402-WA0004.jpg',
   },
   {
     id: 'ropa-025',
@@ -422,7 +422,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260402-WA0005.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260402-WA0005.jpg',
   },
   {
     id: 'ropa-026',
@@ -439,7 +439,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260402-WA0006.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260402-WA0006.jpg',
   },
   {
     id: 'ropa-027',
@@ -456,7 +456,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260406-WA0004.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260406-WA0004.jpg',
   },
   {
     id: 'ropa-028',
@@ -473,7 +473,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260406-WA0005.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260406-WA0005.jpg',
   },
   {
     id: 'ropa-029',
@@ -490,7 +490,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260406-WA0006.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260406-WA0006.jpg',
   },
   {
     id: 'ropa-030',
@@ -507,7 +507,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260407-WA0050.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260407-WA0050.jpg',
   },
   {
     id: 'ropa-031',
@@ -524,7 +524,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260408-WA0000.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260408-WA0000.jpg',
   },
   {
     id: 'ropa-032',
@@ -541,7 +541,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260408-WA0001.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260408-WA0001.jpg',
   },
   {
     id: 'ropa-033',
@@ -558,7 +558,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260408-WA0002.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260408-WA0002.jpg',
   },
   {
     id: 'ropa-034',
@@ -575,7 +575,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260408-WA0003.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260408-WA0003.jpg',
   },
   {
     id: 'ropa-035',
@@ -592,7 +592,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260408-WA0004.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260408-WA0004.jpg',
   },
   {
     id: 'ropa-036',
@@ -609,7 +609,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260408-WA0006.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260408-WA0006.jpg',
   },
   {
     id: 'ropa-037',
@@ -626,7 +626,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260408-WA0008.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260408-WA0008.jpg',
   },
   {
     id: 'ropa-038',
@@ -643,7 +643,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0001.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0001.jpg',
   },
   {
     id: 'ropa-039',
@@ -660,7 +660,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0002.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0002.jpg',
   },
   {
     id: 'ropa-040',
@@ -677,7 +677,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0003.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0003.jpg',
   },
   {
     id: 'ropa-041',
@@ -694,7 +694,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0004.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0004.jpg',
   },
   {
     id: 'ropa-042',
@@ -711,7 +711,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0005.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0005.jpg',
   },
   {
     id: 'ropa-043',
@@ -728,7 +728,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0006.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0006.jpg',
   },
   {
     id: 'ropa-044',
@@ -745,7 +745,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0007.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0007.jpg',
   },
   {
     id: 'ropa-045',
@@ -762,7 +762,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0008.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0008.jpg',
   },
   {
     id: 'ropa-046',
@@ -779,7 +779,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0009.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0009.jpg',
   },
   {
     id: 'ropa-047',
@@ -796,7 +796,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0010.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0010.jpg',
   },
   {
     id: 'ropa-048',
@@ -813,7 +813,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0011.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0011.jpg',
   },
   {
     id: 'ropa-049',
@@ -830,7 +830,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0012.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0012.jpg',
   },
   {
     id: 'ropa-050',
@@ -847,7 +847,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0013.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0013.jpg',
   },
   {
     id: 'ropa-051',
@@ -864,7 +864,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0014.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0014.jpg',
   },
   {
     id: 'ropa-052',
@@ -881,7 +881,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0015.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0015.jpg',
   },
   {
     id: 'ropa-053',
@@ -898,7 +898,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0016.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0016.jpg',
   },
   {
     id: 'ropa-054',
@@ -915,7 +915,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0017.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0017.jpg',
   },
   {
     id: 'ropa-055',
@@ -932,7 +932,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0018.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0018.jpg',
   },
   {
     id: 'ropa-056',
@@ -949,7 +949,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0019.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0019.jpg',
   },
   {
     id: 'ropa-057',
@@ -966,7 +966,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0020.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0020.jpg',
   },
   {
     id: 'ropa-058',
@@ -983,7 +983,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0021.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0021.jpg',
   },
   {
     id: 'ropa-059',
@@ -1000,7 +1000,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0022.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0022.jpg',
   },
   {
     id: 'ropa-060',
@@ -1017,7 +1017,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0026.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0026.jpg',
   },
   {
     id: 'ropa-061',
@@ -1034,7 +1034,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0027.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0027.jpg',
   },
   {
     id: 'ropa-062',
@@ -1051,7 +1051,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0028.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0028.jpg',
   },
   {
     id: 'ropa-063',
@@ -1068,7 +1068,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0030.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0030.jpg',
   },
   {
     id: 'ropa-064',
@@ -1085,7 +1085,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0031.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0031.jpg',
   },
   {
     id: 'ropa-065',
@@ -1102,7 +1102,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0033.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0033.jpg',
   },
   {
     id: 'ropa-066',
@@ -1119,7 +1119,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0035.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0035.jpg',
   },
   {
     id: 'ropa-067',
@@ -1136,7 +1136,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0037.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0037.jpg',
   },
   {
     id: 'ropa-068',
@@ -1153,7 +1153,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0038.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0038.jpg',
   },
   {
     id: 'ropa-069',
@@ -1170,7 +1170,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0039.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0039.jpg',
   },
   {
     id: 'ropa-070',
@@ -1187,7 +1187,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0040.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0040.jpg',
   },
   {
     id: 'ropa-071',
@@ -1204,7 +1204,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0041.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0041.jpg',
   },
   {
     id: 'ropa-072',
@@ -1221,7 +1221,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0042.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0042.jpg',
   },
   {
     id: 'ropa-073',
@@ -1238,7 +1238,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0043.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0043.jpg',
   },
   {
     id: 'ropa-074',
@@ -1255,7 +1255,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0044.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0044.jpg',
   },
   {
     id: 'ropa-075',
@@ -1272,7 +1272,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0045.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0045.jpg',
   },
   {
     id: 'ropa-076',
@@ -1289,7 +1289,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0046.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0046.jpg',
   },
   {
     id: 'ropa-077',
@@ -1306,7 +1306,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0047.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0047.jpg',
   },
   {
     id: 'ropa-078',
@@ -1323,7 +1323,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0048.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0048.jpg',
   },
   {
     id: 'ropa-079',
@@ -1340,7 +1340,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0049.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0049.jpg',
   },
   {
     id: 'ropa-080',
@@ -1357,7 +1357,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0050.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0050.jpg',
   },
   {
     id: 'ropa-081',
@@ -1374,7 +1374,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0051.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0051.jpg',
   },
   {
     id: 'ropa-082',
@@ -1391,7 +1391,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0052.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0052.jpg',
   },
   {
     id: 'ropa-083',
@@ -1408,7 +1408,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0053.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0053.jpg',
   },
   {
     id: 'ropa-084',
@@ -1425,7 +1425,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0054.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0054.jpg',
   },
   {
     id: 'ropa-085',
@@ -1442,7 +1442,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0055.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0055.jpg',
   },
   {
     id: 'ropa-086',
@@ -1459,7 +1459,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0056.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0056.jpg',
   },
   {
     id: 'ropa-087',
@@ -1476,7 +1476,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0057.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0057.jpg',
   },
   {
     id: 'ropa-088',
@@ -1493,7 +1493,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0058.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0058.jpg',
   },
   {
     id: 'ropa-089',
@@ -1510,7 +1510,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0059.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0059.jpg',
   },
   {
     id: 'ropa-090',
@@ -1527,7 +1527,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0060.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0060.jpg',
   },
   {
     id: 'ropa-091',
@@ -1544,7 +1544,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0061.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0061.jpg',
   },
   {
     id: 'ropa-092',
@@ -1561,7 +1561,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0062.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0062.jpg',
   },
   {
     id: 'ropa-093',
@@ -1578,7 +1578,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0063.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0063.jpg',
   },
   {
     id: 'ropa-094',
@@ -1595,7 +1595,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0064.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0064.jpg',
   },
   {
     id: 'ropa-095',
@@ -1612,7 +1612,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0065.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0065.jpg',
   },
   {
     id: 'ropa-096',
@@ -1629,7 +1629,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0066.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0066.jpg',
   },
   {
     id: 'ropa-097',
@@ -1646,7 +1646,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0067.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0067.jpg',
   },
   {
     id: 'ropa-098',
@@ -1663,7 +1663,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0068.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0068.jpg',
   },
   {
     id: 'ropa-099',
@@ -1680,7 +1680,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0069.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0069.jpg',
   },
   {
     id: 'ropa-100',
@@ -1697,7 +1697,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0070.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0070.jpg',
   },
   {
     id: 'ropa-101',
@@ -1714,7 +1714,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0071.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0071.jpg',
   },
   {
     id: 'ropa-102',
@@ -1731,7 +1731,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0072.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0072.jpg',
   },
   {
     id: 'ropa-103',
@@ -1748,7 +1748,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0073.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0073.jpg',
   },
   {
     id: 'ropa-104',
@@ -1765,7 +1765,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0074.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0074.jpg',
   },
   {
     id: 'ropa-105',
@@ -1782,7 +1782,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0075.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0075.jpg',
   },
   {
     id: 'ropa-106',
@@ -1799,7 +1799,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0076.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0076.jpg',
   },
   {
     id: 'ropa-107',
@@ -1816,7 +1816,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0077.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0077.jpg',
   },
   {
     id: 'ropa-108',
@@ -1833,7 +1833,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0078.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0078.jpg',
   },
   {
     id: 'ropa-109',
@@ -1850,7 +1850,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0079.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0079.jpg',
   },
   {
     id: 'ropa-110',
@@ -1867,7 +1867,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0082.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0082.jpg',
   },
   {
     id: 'ropa-111',
@@ -1884,7 +1884,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0083.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0083.jpg',
   },
   {
     id: 'ropa-112',
@@ -1901,7 +1901,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0084.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0084.jpg',
   },
   {
     id: 'ropa-113',
@@ -1918,7 +1918,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0085.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0085.jpg',
   },
   {
     id: 'ropa-114',
@@ -1935,7 +1935,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0086.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0086.jpg',
   },
   {
     id: 'ropa-115',
@@ -1952,7 +1952,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0087.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0087.jpg',
   },
   {
     id: 'ropa-116',
@@ -1969,7 +1969,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0088.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0088.jpg',
   },
   {
     id: 'ropa-117',
@@ -1986,7 +1986,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0089.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0089.jpg',
   },
   {
     id: 'ropa-118',
@@ -2003,7 +2003,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0090.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0090.jpg',
   },
   {
     id: 'ropa-119',
@@ -2020,7 +2020,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0091.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0091.jpg',
   },
   {
     id: 'ropa-120',
@@ -2037,7 +2037,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0092.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0092.jpg',
   },
   {
     id: 'ropa-121',
@@ -2054,7 +2054,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0093.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0093.jpg',
   },
   {
     id: 'ropa-122',
@@ -2071,7 +2071,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0094.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0094.jpg',
   },
   {
     id: 'ropa-123',
@@ -2088,7 +2088,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260410-WA0097.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260410-WA0097.jpg',
   },
   {
     id: 'ropa-124',
@@ -2105,7 +2105,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260413-WA0006.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260413-WA0006.jpg',
   },
   {
     id: 'ropa-125',
@@ -2122,7 +2122,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260413-WA0008.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260413-WA0008.jpg',
   },
   {
     id: 'ropa-126',
@@ -2139,7 +2139,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260413-WA0009.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260413-WA0009.jpg',
   },
   {
     id: 'ropa-127',
@@ -2156,7 +2156,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260413-WA0010.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260413-WA0010.jpg',
   },
   {
     id: 'ropa-128',
@@ -2173,7 +2173,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260413-WA0012.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260413-WA0012.jpg',
   },
   {
     id: 'ropa-129',
@@ -2190,7 +2190,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260413-WA0013.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260413-WA0013.jpg',
   },
   {
     id: 'ropa-130',
@@ -2207,7 +2207,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260413-WA0015.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260413-WA0015.jpg',
   },
   {
     id: 'ropa-131',
@@ -2224,7 +2224,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260413-WA0017.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260413-WA0017.jpg',
   },
   {
     id: 'ropa-132',
@@ -2241,7 +2241,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260413-WA0019.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260413-WA0019.jpg',
   },
   {
     id: 'ropa-133',
@@ -2258,7 +2258,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260413-WA0022.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260413-WA0022.jpg',
   },
   {
     id: 'ropa-134',
@@ -2275,7 +2275,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260413-WA0023.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260413-WA0023.jpg',
   },
   {
     id: 'ropa-135',
@@ -2292,7 +2292,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260413-WA0025.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260413-WA0025.jpg',
   },
   {
     id: 'ropa-136',
@@ -2309,7 +2309,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260413-WA0031.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260413-WA0031.jpg',
   },
   {
     id: 'ropa-137',
@@ -2326,7 +2326,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260413-WA0032.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260413-WA0032.jpg',
   },
   {
     id: 'ropa-138',
@@ -2343,7 +2343,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260413-WA0033.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260413-WA0033.jpg',
   },
   {
     id: 'ropa-139',
@@ -2360,7 +2360,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260413-WA0034.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260413-WA0034.jpg',
   },
   {
     id: 'ropa-140',
@@ -2377,7 +2377,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260413-WA0035.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260413-WA0035.jpg',
   },
   {
     id: 'ropa-141',
@@ -2394,7 +2394,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260413-WA0036.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260413-WA0036.jpg',
   },
   {
     id: 'ropa-142',
@@ -2411,7 +2411,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260413-WA0037.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260413-WA0037.jpg',
   },
   {
     id: 'ropa-143',
@@ -2428,7 +2428,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260413-WA0038.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260413-WA0038.jpg',
   },
   {
     id: 'ropa-144',
@@ -2445,7 +2445,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260413-WA0039.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260413-WA0039.jpg',
   },
   {
     id: 'ropa-145',
@@ -2462,7 +2462,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260413-WA0040.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260413-WA0040.jpg',
   },
   {
     id: 'ropa-146',
@@ -2479,7 +2479,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260413-WA0041.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260413-WA0041.jpg',
   },
   {
     id: 'ropa-147',
@@ -2496,7 +2496,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260413-WA0042.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260413-WA0042.jpg',
   },
   {
     id: 'ropa-148',
@@ -2513,7 +2513,7 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260413-WA0043.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260413-WA0043.jpg',
   },
   {
     id: 'ropa-149',
@@ -2530,6 +2530,6 @@ export const PRODUCT_SEED_DATA = [
     colors: ['Único'],
     rating: 0,
     reviews: 0,
-    imageUrl: '/static/products/Ropa/IMG-20260413-WA0044.jpg',
+    imageUrl: 'https://res.cloudinary.com/dj6gvgvyr/image/upload/shopstore/products/IMG-20260413-WA0044.jpg',
   },
 ];
