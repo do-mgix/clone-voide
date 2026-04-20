@@ -13,16 +13,21 @@ export function initCartPage() {
   const container = document.getElementById('cart-items-container');
   if (!container) return;
 
+  const summaryEl = document.querySelector('.cart-summary');
+
   function renderSummary(items) {
+    if (summaryEl) summaryEl.hidden = !items.length;
+    if (!items.length) return;
+
     const summary = getCartSummary(items);
     document.getElementById('summary-subtotal').textContent = summary.formatPrice(summary.subtotal);
     document.getElementById('summary-total').textContent = summary.formatPrice(summary.total);
 
     const shippingEl = document.getElementById('summary-shipping');
     if (shippingEl) {
-      shippingEl.textContent = items.length ? 'Grátis' : '—';
-      shippingEl.style.color = items.length ? 'var(--green-soft)' : '';
-      shippingEl.style.fontWeight = items.length ? '600' : '';
+      shippingEl.textContent = 'Grátis';
+      shippingEl.style.color = 'var(--green-soft)';
+      shippingEl.style.fontWeight = '600';
     }
   }
 
