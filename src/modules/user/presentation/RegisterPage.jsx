@@ -142,7 +142,7 @@ export default function RegisterPage() {
   };
 
   return (
-    <SiteLayout activeNav="register" peekNav>
+    <SiteLayout activeNav="register">
       <section className="register-page login-page">
         <div className="register-wrapper">
           <div className="register-panel login-panel">

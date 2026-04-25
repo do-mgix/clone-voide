@@ -36,7 +36,7 @@ export default function CompleteProfilePage() {
   }
 
   return (
-    <SiteLayout activeNav="account" peekNav>
+    <SiteLayout activeNav="account">
       <section className="login-page login-page--complete-profile">
         <div className="login-panel">
           <h1>Complete seu cadastro</h1>

@@ -117,17 +117,6 @@ nav {
   transition: transform 0.45s ease, opacity 0.45s ease;
 }
 
-.nav-hidden {
-  transform: translateY(-120%);
-  opacity: 0;
-  pointer-events: none;
-}
-
-.nav-hidden.nav-peek {
-  transform: translateY(calc(-100% + 8px));
-  opacity: 1;
-}
-
 body.hero-full-active nav {
   margin: 0;
 }
@@ -524,12 +513,6 @@ footer {
   nav {
     padding: 0 20px;
     position: fixed;
-  }
-
-  .nav-hidden {
-    transform: none;
-    opacity: 1;
-    pointer-events: auto;
   }
 
   .nav-links {

@@ -95,7 +95,7 @@ export default function LoginPage() {
   }
 
   return (
-    <SiteLayout activeNav="login" peekNav>
+    <SiteLayout activeNav="login">
       <section className="login-page">
         <div className="login-panel">
           <div className="login-panel-header">

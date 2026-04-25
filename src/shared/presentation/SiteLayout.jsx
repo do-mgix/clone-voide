@@ -1,4 +1,4 @@
-import { useMemo, useState, useEffect, useRef } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import {
   ACCOUNT_PAGE_PATH,
   buildCatalogPageHref,
@@ -64,10 +64,8 @@ function FooterMascot() {
   );
 }
 
-export function SiteLayout({ children, activeNav = '', peekNav = false }) {
+export function SiteLayout({ children, activeNav = '' }) {
   const [searchTerm, setSearchTerm] = useState('');
-  const [atTop, setAtTop] = useState(true);
-  const [hoverReveal, setHoverReveal] = useState(false);
   const [searchItems, setSearchItems] = useState([]);
   const filteredResults = useMemo(() => {
     const query = searchTerm.trim().toLowerCase();
@@ -83,46 +81,6 @@ export function SiteLayout({ children, activeNav = '', peekNav = false }) {
     const href = buildProductPageHref({ id: item.id });
     window.location.href = href;
   }
-
-  useEffect(() => {
-    function onScroll() {
-      setAtTop(window.scrollY <= 0);
-    }
-    onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
-
-  useEffect(() => {
-    function onShowNav() {
-      setAtTop(false);
-    }
-    window.addEventListener('showNav', onShowNav);
-    return () => window.removeEventListener('showNav', onShowNav);
-  }, []);
-
-  useEffect(() => {
-    function onMouseMove(event) {
-      if (window.innerWidth <= 768) {
-        setHoverReveal(false);
-        return;
-      }
-
-      setHoverReveal(event.clientY <= 88);
-    }
-
-    function onMouseLeave() {
-      setHoverReveal(false);
-    }
-
-    window.addEventListener('mousemove', onMouseMove);
-    document.addEventListener('mouseleave', onMouseLeave);
-
-    return () => {
-      window.removeEventListener('mousemove', onMouseMove);
-      document.removeEventListener('mouseleave', onMouseLeave);
-    };
-  }, []);
 
   useEffect(() => {
     let cancelled = false;
@@ -142,13 +100,9 @@ export function SiteLayout({ children, activeNav = '', peekNav = false }) {
     };
   }, []);
 
-  const navClassName = atTop && !hoverReveal
-    ? `nav nav-hidden${peekNav ? ' nav-peek' : ''}`
-    : 'nav';
-
   return (
     <>
-      <nav className={navClassName}>
+      <nav className="nav">
         <a href={HOME_PAGE_PATH} className="nav-logo tomorrow-bold">
           VOIDE
         </a>

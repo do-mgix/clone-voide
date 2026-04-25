@@ -35,7 +35,7 @@ export default function GoogleLoginPage() {
   }
 
   return (
-    <SiteLayout activeNav="login" peekNav>
+    <SiteLayout activeNav="login">
       <section className="login-page login-page--google-entry">
         <div className="login-panel">
           <div className="login-panel-header">

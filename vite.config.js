@@ -17,6 +17,7 @@ export default defineConfig({
         product: resolve(__dirname, 'src/modules/catalog/presentation/product.html'),
         account: resolve(__dirname, 'src/modules/user/presentation/account.html'),
         login: resolve(__dirname, 'src/modules/user/presentation/login.html'),
+        register: resolve(__dirname, 'src/modules/user/presentation/register.html'),
         googleLogin: resolve(__dirname, 'src/modules/user/presentation/google-login.html'),
         completeProfile: resolve(__dirname, 'src/modules/user/presentation/complete-profile.html'),
         checkout: resolve(__dirname, 'src/modules/checkout/presentation/checkout.html'),
