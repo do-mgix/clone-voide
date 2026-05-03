@@ -1,2 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /src/modules/cart/
+Disallow: /src/modules/checkout/
+Disallow: /src/modules/orders/
+Disallow: /src/modules/user/
+
+Sitemap: https://voide.shop/sitemap.xml
