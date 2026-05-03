@@ -24,7 +24,8 @@
   align-items: center;
   padding: 0 80px;
   opacity: 0;
-  transition: opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity;
   pointer-events: none;
 }
 
@@ -38,8 +39,9 @@
   display: flex;
   flex-direction: column;
   gap: 0;
-  z-index: 1;
+  z-index: 5;
   padding-right: 40px;
+  position: relative;
 }
 
 .hero-eyebrow {
@@ -252,8 +254,10 @@ html.dark .hero-actions .btn-primary {
   border-radius: 50%;
   background: #333;
   border: none;
-  padding: 0;
+  padding: 8px;
+  margin: -8px;
   cursor: pointer;
+  touch-action: manipulation;
   transition: all 0.3s ease;
 }
 
@@ -271,6 +275,7 @@ html.dark .hero-actions .btn-primary {
   border: none;
   cursor: pointer;
   z-index: 2;
+  touch-action: manipulation;
 }
 
 /* Progress bar */
