@@ -5,6 +5,7 @@ import { initCommonPage } from '../../../app/pages/common.js';
 import { initHomePage } from './home-page.js';
 import { SiteLayout } from '../../../shared/presentation/SiteLayout.jsx';
 import { buildCatalogPageHref, buildProductPageHref } from '../../../shared/presentation/page-paths.js';
+import { toSlug } from '../../../shared/kernel/slug.js';
 import {
   getAllProducts,
   getFeaturedProducts,
@@ -262,6 +263,7 @@ export default function HomePage() {
             <div
               className="product-card"
               data-id={product.id}
+              data-slug={toSlug(product.name)}
               data-name={product.name}
               data-price={product.price}
               data-emoji={product.emoji}
@@ -290,7 +292,7 @@ export default function HomePage() {
               </div>
               <div className="product-info">
                 <div className="product-category">{product.cat}</div>
-                <a className="product-name" href={buildProductPageHref({ id: product.id })}>
+                <a className="product-name" href={buildProductPageHref({ slug: toSlug(product.name) })}>
                   {product.name}
                 </a>
                 <div className="product-bottom">

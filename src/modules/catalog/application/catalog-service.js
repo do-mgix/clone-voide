@@ -1,5 +1,6 @@
 import { apiClient } from '../../../shared/api/client.js';
 import { parsePrice } from '../../../shared/kernel/currency.js';
+import { toSlug } from '../../../shared/kernel/slug.js';
 
 let productsCache = null;
 
@@ -51,6 +52,14 @@ export async function getProductById(id) {
   const product = response.data;
   mergeIntoCache([product]);
   return product;
+}
+
+export async function getProductBySlug(slug) {
+  const products = await getAllProducts();
+  const found = products.find((p) => toSlug(p.name) === slug);
+  if (!found) throw new Error(`Produto não encontrado: ${slug}`);
+  if (found.description) return found;
+  return getProductById(found.id);
 }
 
 export function countProductsByCategory(category, products = getCachedProducts()) {

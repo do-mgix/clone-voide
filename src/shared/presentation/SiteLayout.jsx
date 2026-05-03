@@ -10,6 +10,7 @@ import {
   ORDERS_PAGE_PATH,
 } from './page-paths.js';
 import { getAllProducts } from '../../modules/catalog/application/catalog-service.js';
+import { toSlug } from '../kernel/slug.js';
 const MAX_SEARCH_RESULTS = 6;
 
 function FooterMascot() {
@@ -78,7 +79,7 @@ export function SiteLayout({ children, activeNav = '' }) {
   const showResults = searchTerm.trim().length > 0;
 
   function handleSelectResult(item) {
-    const href = buildProductPageHref({ id: item.id });
+    const href = buildProductPageHref({ slug: toSlug(item.name) });
     window.location.href = href;
   }
 

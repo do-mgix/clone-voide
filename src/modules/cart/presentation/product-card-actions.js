@@ -65,7 +65,7 @@ export function bindProductCardActions(root = document) {
 
       const product = readProductFromCard(card);
       if (!product) return;
-      window.location.href = buildProductPageHref({ id: product.id });
+      window.location.href = buildProductPageHref({ slug: card.dataset.slug || product.id });
     });
   });
 }

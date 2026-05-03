@@ -1,9 +1,11 @@
 import { buildProductPageHref } from '../../../shared/presentation/page-paths.js';
 import { API_BASE_URL } from '../../../shared/api/client.js';
+import { toSlug } from '../../../shared/kernel/slug.js';
 
 function productDataset(product) {
   return [
     `data-id="${product.id}"`,
+    `data-slug="${toSlug(product.name)}"`,
     `data-name="${product.name}"`,
     `data-price="${product.price}"`,
     `data-emoji="${product.emoji}"`,
@@ -36,7 +38,7 @@ export function renderProductCard(product) {
       </div>
       <div class="product-info">
         <div class="product-category">${product.cat}</div>
-        <a class="product-name" href="${buildProductPageHref({ id: product.id })}" target="_blank" rel="noopener noreferrer">${product.name}</a>
+        <a class="product-name" href="${buildProductPageHref({ slug: toSlug(product.name) })}" target="_blank" rel="noopener noreferrer">${product.name}</a>
         <div class="product-bottom">
           <div>
             <span class="product-price">${product.price}</span>

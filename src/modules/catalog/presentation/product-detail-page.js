@@ -1,4 +1,4 @@
-import { getAllProducts, getProductById, getRelatedProducts } from '../application/catalog-service.js';
+import { getAllProducts, getProductBySlug, getRelatedProducts } from '../application/catalog-service.js';
 import { API_BASE_URL } from '../../../shared/api/client.js';
 import { PIB_GRADIENTS } from '../domain/product-catalog.js';
 import { renderProductCard } from './product-card.js';
@@ -6,9 +6,9 @@ import { bindProductCardActions } from '../../cart/presentation/product-card-act
 import { addProductToCart } from '../../cart/application/cart-service.js';
 import { buildCatalogPageHref } from '../../../shared/presentation/page-paths.js';
 
-function productIdFromUrl() {
+function productSlugFromUrl() {
   const params = new URLSearchParams(window.location.search);
-  return params.get('id') || '';
+  return params.get('slug') || '';
 }
 
 function renderOptionButtons(rootId, values = []) {
@@ -36,15 +36,15 @@ export function initProductDetailPage() {
   const detailName = document.getElementById('detail-name');
   if (!detailName) return;
 
-  const productId = productIdFromUrl();
+  const productSlug = productSlugFromUrl();
   let quantity = 1;
 
-  if (!productId) {
+  if (!productSlug) {
     detailName.textContent = 'Produto não encontrado';
     return;
   }
 
-  Promise.all([getProductById(productId), getAllProducts()])
+  Promise.all([getProductBySlug(productSlug), getAllProducts()])
     .then(([product, allProducts]) => {
       detailName.textContent = product.name;
       document.getElementById('detail-cat').textContent = product.cat;
