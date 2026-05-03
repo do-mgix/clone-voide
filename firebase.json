@@ -7,10 +7,17 @@
       "**/node_modules/**"
     ],
     "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
+      { "source": "/catalogo", "destination": "/src/modules/catalog/presentation/catalog.html" },
+      { "source": "/produto/**", "destination": "/src/modules/catalog/presentation/product.html" },
+      { "source": "/carrinho", "destination": "/src/modules/cart/presentation/cart.html" },
+      { "source": "/checkout", "destination": "/src/modules/checkout/presentation/checkout.html" },
+      { "source": "/pedidos", "destination": "/src/modules/orders/presentation/orders.html" },
+      { "source": "/conta", "destination": "/src/modules/user/presentation/account.html" },
+      { "source": "/entrar", "destination": "/src/modules/user/presentation/login.html" },
+      { "source": "/cadastro", "destination": "/src/modules/user/presentation/register.html" },
+      { "source": "/entrar/google", "destination": "/src/modules/user/presentation/google-login.html" },
+      { "source": "/cadastro/completar", "destination": "/src/modules/user/presentation/complete-profile.html" },
+      { "source": "**", "destination": "/index.html" }
     ]
   }
 }

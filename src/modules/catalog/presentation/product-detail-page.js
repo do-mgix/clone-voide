@@ -7,8 +7,9 @@ import { addProductToCart } from '../../cart/application/cart-service.js';
 import { buildCatalogPageHref } from '../../../shared/presentation/page-paths.js';
 
 function productSlugFromUrl() {
-  const params = new URLSearchParams(window.location.search);
-  return params.get('slug') || '';
+  // Path: /produto/galo-feminina-listrada
+  const parts = window.location.pathname.split('/');
+  return parts[parts.length - 1] || '';
 }
 
 function renderOptionButtons(rootId, values = []) {

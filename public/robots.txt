@@ -1,8 +1,10 @@
 User-agent: *
 Allow: /
-Disallow: /src/modules/cart/
-Disallow: /src/modules/checkout/
-Disallow: /src/modules/orders/
-Disallow: /src/modules/user/
+Disallow: /carrinho
+Disallow: /checkout
+Disallow: /pedidos
+Disallow: /conta
+Disallow: /entrar
+Disallow: /cadastro
 
 Sitemap: https://voide.shop/sitemap.xml
