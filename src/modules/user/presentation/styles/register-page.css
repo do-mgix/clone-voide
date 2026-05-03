@@ -168,6 +168,12 @@
   transition: none;
 }
 
+html.dark .register-submit {
+  background: #000;
+  color: #fff;
+  border-color: #fff;
+}
+
 .register-terms {
   font-size: 0.75rem;
   color: var(--text-mid);

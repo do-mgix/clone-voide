@@ -249,13 +249,13 @@ html.dark .hero-actions .btn-primary {
 }
 
 .hero-dot {
-  width: 4px;
-  height: 4px;
+  width: 3px;
+  height: 3px;
   border-radius: 50%;
   background: #333;
   border: none;
-  padding: 8px;
-  margin: -8px;
+  padding: 6px;
+  margin: -6px;
   cursor: pointer;
   touch-action: manipulation;
   transition: all 0.3s ease;
@@ -263,7 +263,7 @@ html.dark .hero-actions .btn-primary {
 
 .hero-dot.active {
   background: #edf0f2;
-  width: 20px;
+  width: 14px;
   border-radius: 2px;
 }
 
