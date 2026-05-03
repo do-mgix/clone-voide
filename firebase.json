@@ -6,6 +6,18 @@
       "**/.*",
       "**/node_modules/**"
     ],
+    "redirects": [
+      { "source": "/src/modules/catalog/presentation/catalog.html", "destination": "/catalogo", "type": 301 },
+      { "source": "/src/modules/catalog/presentation/product.html", "destination": "/produto", "type": 301 },
+      { "source": "/src/modules/cart/presentation/cart.html", "destination": "/carrinho", "type": 301 },
+      { "source": "/src/modules/checkout/presentation/checkout.html", "destination": "/checkout", "type": 301 },
+      { "source": "/src/modules/orders/presentation/orders.html", "destination": "/pedidos", "type": 301 },
+      { "source": "/src/modules/user/presentation/account.html", "destination": "/conta", "type": 301 },
+      { "source": "/src/modules/user/presentation/login.html", "destination": "/entrar", "type": 301 },
+      { "source": "/src/modules/user/presentation/register.html", "destination": "/cadastro", "type": 301 },
+      { "source": "/src/modules/user/presentation/google-login.html", "destination": "/entrar/google", "type": 301 },
+      { "source": "/src/modules/user/presentation/complete-profile.html", "destination": "/cadastro/completar", "type": 301 }
+    ],
     "rewrites": [
       { "source": "/catalogo", "destination": "/src/modules/catalog/presentation/catalog.html" },
       { "source": "/produto/**", "destination": "/src/modules/catalog/presentation/product.html" },
