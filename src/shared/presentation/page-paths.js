@@ -1,4 +1,4 @@
-export const HOME_PAGE_PATH = '/index.html';
+export const HOME_PAGE_PATH = '/';
 export const CATALOG_PAGE_PATH = '/src/modules/catalog/presentation/catalog.html';
 export const PRODUCT_PAGE_BASE_PATH = '/src/modules/catalog/presentation/product.html';
 export const CART_PAGE_PATH = '/src/modules/cart/presentation/cart.html';
