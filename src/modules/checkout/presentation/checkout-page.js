@@ -24,19 +24,62 @@ export function initCheckoutPage() {
   const submitBtn = document.getElementById('btn-place-order');
   const zipInput = document.getElementById('zip');
 
+  const supportedMethodsByProvider = {
+    stripe: ['credit_card'],
+    mercadopago: ['pix', 'credit_card', 'boleto'],
+  };
+
+  let selectedProvider = 'stripe';
   let selectedPayment = 'pix';
   let selectedShipping = null;
   let cartItems = [];
 
-  // ── Payment selection ────────────────────────────────
-  document.querySelectorAll('.payment-option').forEach((btn) => {
+  function syncPaymentMethods() {
+    const supported = supportedMethodsByProvider[selectedProvider] || [];
+    const paymentButtons = [...document.querySelectorAll('.payment-option[data-method]')];
+
+    paymentButtons.forEach((btn) => {
+      const enabled = supported.includes(btn.dataset.method);
+      btn.classList.toggle('is-disabled', !enabled);
+      btn.toggleAttribute('disabled', !enabled);
+      if (!enabled) {
+        btn.classList.remove('active');
+      }
+    });
+
+    if (!supported.includes(selectedPayment)) {
+      selectedPayment = supported[0] || 'credit_card';
+    }
+
+    document
+      .querySelector(`.payment-option[data-method="${selectedPayment}"]`)
+      ?.classList.add('active');
+  }
+
+  document.querySelectorAll('.payment-provider-option').forEach((btn) => {
     btn.addEventListener('click', () => {
+      document.querySelectorAll('.payment-provider-option').forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+      selectedProvider = btn.dataset.provider;
+      syncPaymentMethods();
+    });
+  });
+  document.querySelector('.payment-provider-option[data-provider="stripe"]')?.classList.add('active');
+
+  // ── Payment selection ────────────────────────────────
+  document.querySelectorAll('.payment-option[data-method]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      if (btn.disabled) return;
       document.querySelectorAll('.payment-option').forEach((b) => b.classList.remove('active'));
+      document.querySelectorAll('.payment-provider-option').forEach((b) => b.classList.remove('active'));
+      document
+        .querySelector(`.payment-provider-option[data-provider="${selectedProvider}"]`)
+        ?.classList.add('active');
       btn.classList.add('active');
       selectedPayment = btn.dataset.method;
     });
   });
-  document.querySelector('.payment-option[data-method="pix"]')?.classList.add('active');
+  syncPaymentMethods();
 
   // ── Summary ──────────────────────────────────────────
   function updateSummaryTotals() {
@@ -153,29 +196,6 @@ export function initCheckoutPage() {
     updateSummaryTotals();
   }
 
-  async function fetchAddressByCep(zip) {
-    try {
-      const res = await fetch(`https://viacep.com.br/ws/${zip}/json/`);
-      if (!res.ok) return;
-      const data = await res.json();
-      if (data.erro) return;
-
-      const fields = {
-        street: data.logradouro,
-        neighborhood: data.bairro,
-        city: data.localidade,
-        state: data.uf,
-      };
-      for (const [id, value] of Object.entries(fields)) {
-        if (!value) continue;
-        const el = document.getElementById(id);
-        if (el) el.value = value;
-      }
-    } catch {
-      // ViaCEP offline — user keeps typing manually
-    }
-  }
-
   // Debounce ZIP input (trigger on 8 digits)
   let zipTimer;
   zipInput?.addEventListener('input', (e) => {
@@ -184,10 +204,7 @@ export function initCheckoutPage() {
     if (val.length === 8) e.target.value = `${val.slice(0, 5)}-${val.slice(5)}`;
     clearTimeout(zipTimer);
     if (val.length === 8) {
-      zipTimer = setTimeout(() => {
-        fetchAddressByCep(val);
-        fetchShippingQuotes(val);
-      }, 400);
+      zipTimer = setTimeout(() => fetchShippingQuotes(val), 400);
     }
   });
 
@@ -225,7 +242,12 @@ export function initCheckoutPage() {
     submitBtn.textContent = 'Processando…';
 
     try {
-      const { checkoutUrl } = await createOrder(address, selectedPayment, shipping);
+      const { checkoutUrl } = await createOrder(
+        address,
+        selectedProvider,
+        selectedPayment,
+        shipping,
+      );
       window.location.href = checkoutUrl;
     } catch {
       showToast('Erro ao finalizar pedido. Tente novamente.');

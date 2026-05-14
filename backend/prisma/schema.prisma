@@ -1,6 +1,5 @@
 generator client {
-  provider      = "prisma-client-js"
-  binaryTargets = ["native", "debian-openssl-3.0.x"]
+  provider = "prisma-client-js"
 }
 
 datasource db {
@@ -44,7 +43,9 @@ model Order {
   user                User        @relation(fields: [userId], references: [id])
   status              String      @default("confirmed")
   totalCents          Int
+  paymentProvider     String      @default("mercadopago")
   paymentMethod       String
+  paymentSessionId    String?
   preferenceId        String?
   shippingServiceId   Int?
   shippingCompany     String?

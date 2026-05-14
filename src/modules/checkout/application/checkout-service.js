@@ -5,7 +5,12 @@ export async function calculateShipping({ toZip, totalItems, insuranceValueCents
   return response.data;
 }
 
-export async function createOrder(address, paymentMethod, shipping) {
-  const response = await apiClient.post('/orders', { address, paymentMethod, shipping });
+export async function createOrder(address, paymentProvider, paymentMethod, shipping) {
+  const response = await apiClient.post('/orders', {
+    address,
+    paymentProvider,
+    paymentMethod,
+    shipping,
+  });
   return response.data;
 }

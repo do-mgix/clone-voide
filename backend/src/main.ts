@@ -8,18 +8,19 @@ import { AppModule } from './app.module';
 import { FirebaseAuthGuard } from './auth/guards/firebase-auth.guard';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule, { rawBody: true });
+  const app = await NestFactory.create(AppModule);
   app.enableCors({
-    origin: [
-      'http://localhost:5173',
-      'https://shopstore-b1e03.web.app',
-      'https://voide.shop',
-      'https://www.voide.shop',
-    ],
+    origin: true,
     credentials: true,
   });
   app.use(cookieParser());
-  app.use(express.json());
+  app.use(
+    express.json({
+      verify: (req: Request & { rawBody?: string }, _res, buf) => {
+        req.rawBody = buf.toString('utf8');
+      },
+    }),
+  );
   // Serve static product images from the shared public/ folder (mounted at /static to avoid
   // conflicting with the /products API route — express.static would redirect /products to /products/)
   app.use('/static', express.static(path.join(process.cwd(), '..', 'public')));

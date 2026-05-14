@@ -15,6 +15,11 @@ const PAYMENT_LABELS: Record<string, string> = {
   boleto: 'Boleto bancário',
 };
 
+const PAYMENT_PROVIDER_LABELS: Record<string, string> = {
+  mercadopago: 'Mercado Pago',
+  stripe: 'Stripe',
+};
+
 const STATUS_LABELS: Record<string, string> = {
   pending: 'Aguardando pagamento',
   confirmed: 'Confirmado',
@@ -59,6 +64,8 @@ export class OrdersController {
       statusLabel: STATUS_LABELS[order.status] ?? order.status,
       totalCents: order.totalCents,
       total: formatPrice(order.totalCents),
+      paymentProvider: order.paymentProvider,
+      paymentProviderLabel: PAYMENT_PROVIDER_LABELS[order.paymentProvider] ?? order.paymentProvider,
       paymentMethod: order.paymentMethod,
       paymentLabel: PAYMENT_LABELS[order.paymentMethod] ?? order.paymentMethod,
       address: {

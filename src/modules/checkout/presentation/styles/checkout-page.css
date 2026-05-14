@@ -139,6 +139,18 @@
   background: var(--green-foam);
 }
 
+.payment-option.is-disabled,
+.payment-option:disabled {
+  opacity: 0.48;
+  cursor: not-allowed;
+}
+
+.payment-option.is-disabled:hover,
+.payment-option:disabled:hover {
+  border-color: var(--green-pale);
+  background: var(--card-bg);
+}
+
 .payment-icon {
   width: 32px;
   height: 32px;

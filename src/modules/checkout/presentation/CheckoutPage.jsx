@@ -86,6 +86,28 @@ export default function CheckoutPage() {
 
             {/* ── Payment ── */}
             <section className="checkout-section">
+              <h2>Gateway de pagamento</h2>
+              <div className="payment-options payment-options--providers">
+                <button type="button" className="payment-option payment-provider-option" data-provider="stripe">
+                  <span className="payment-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M4 7.5C4 5.57 5.57 4 7.5 4h9A3.5 3.5 0 0 1 20 7.5v9a3.5 3.5 0 0 1-3.5 3.5h-9A3.5 3.5 0 0 1 4 16.5z"/><path d="M8 10.5c0-1.1.9-2 2-2h4"/><path d="M8 13.5c0 1.1.9 2 2 2h6"/><path d="M14 8.5c1.1 0 2 .9 2 2"/></svg>
+                  </span>
+                  <div>
+                    <span className="payment-name">Stripe</span>
+                    <span className="payment-desc">Checkout hospedado para cartão</span>
+                  </div>
+                </button>
+                <button type="button" className="payment-option payment-provider-option" data-provider="mercadopago">
+                  <span className="payment-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9c1.2-1.5 2.8-2.2 4.7-2.2 2 0 3.6.8 5 2.2"/><path d="M4 12.5c1.2-1.5 2.8-2.2 4.7-2.2 2 0 3.6.8 5 2.2"/><path d="M14 12.5c.9-1.2 2-1.8 3.5-1.8 1 0 1.8.3 2.5.9"/><path d="M3 15.5c1.1 1.7 2.8 2.5 5 2.5 2.1 0 3.8-.8 5-2.5"/><path d="M13 15.5c1 1.2 2.2 1.8 3.8 1.8 1.7 0 3-.7 4.2-2"/></svg>
+                  </span>
+                  <div>
+                    <span className="payment-name">Mercado Pago</span>
+                    <span className="payment-desc">PIX, boleto e cartão</span>
+                  </div>
+                </button>
+              </div>
+
               <h2>Forma de pagamento</h2>
               <div className="payment-options">
                 <button type="button" className="payment-option" data-method="pix">
@@ -103,7 +125,7 @@ export default function CheckoutPage() {
                   </span>
                   <div>
                     <span className="payment-name">Cartão de crédito</span>
-                    <span className="payment-desc">Até 12× sem juros</span>
+                    <span className="payment-desc">Disponível em Stripe e Mercado Pago</span>
                   </div>
                 </button>
                 <button type="button" className="payment-option" data-method="boleto">

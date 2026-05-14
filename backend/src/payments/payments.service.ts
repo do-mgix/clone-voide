@@ -1,83 +1,70 @@
-import { Injectable, Logger } from '@nestjs/common';
+import { BadRequestException, Inject, Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import Stripe from 'stripe';
-
-type CheckoutItem = {
-  productName: string;
-  productEmoji: string;
-  priceInCents: number;
-  quantity: number;
-};
-
-type CreateCheckoutSessionInput = {
-  orderId: string;
-  items: CheckoutItem[];
-  payerEmail: string;
-  paymentMethod: 'pix' | 'credit_card' | 'boleto';
-  shippingPriceCents?: number;
-};
-
-const PAYMENT_METHOD_MAP: Record<
-  CreateCheckoutSessionInput['paymentMethod'],
-  Stripe.Checkout.SessionCreateParams.PaymentMethodType[]
-> = {
-  credit_card: ['card'],
-  pix: ['pix' as Stripe.Checkout.SessionCreateParams.PaymentMethodType],
-  boleto: ['boleto' as Stripe.Checkout.SessionCreateParams.PaymentMethodType],
-};
+import { PAYMENT_PROVIDERS } from './payment.constants';
+import {
+  CreateCheckoutInput,
+  PaymentProvider,
+  PaymentProviderName,
+  PaymentWebhookInput,
+} from './payment-provider.interface';
 
 @Injectable()
 export class PaymentsService {
-  private readonly stripe: Stripe;
-  private readonly logger = new Logger(PaymentsService.name);
+  private readonly providerMap: Map<PaymentProviderName, PaymentProvider>;
 
-  constructor(private readonly config: ConfigService) {
-    this.stripe = new Stripe(this.config.get<string>('STRIPE_SECRET_KEY') ?? '');
+  constructor(
+    @Inject(PAYMENT_PROVIDERS)
+    providers: PaymentProvider[],
+    private readonly config: ConfigService,
+  ) {
+    this.providerMap = new Map(providers.map((provider) => [provider.name, provider]));
   }
 
-  async createCheckoutSession(input: CreateCheckoutSessionInput) {
-    const appUrl = this.config.get<string>('APP_URL') ?? 'http://localhost:5173';
-    const ordersPage = `${appUrl}/src/modules/orders/presentation/orders.html`;
-
-    const lineItems: Stripe.Checkout.SessionCreateParams.LineItem[] = input.items.map((item) => ({
-      quantity: item.quantity,
-      price_data: {
-        currency: 'brl',
-        unit_amount: item.priceInCents,
-        product_data: {
-          name: `${item.productEmoji} ${item.productName}`.trim(),
-        },
-      },
-    }));
-
-    if (input.shippingPriceCents && input.shippingPriceCents > 0) {
-      lineItems.push({
-        quantity: 1,
-        price_data: {
-          currency: 'brl',
-          unit_amount: input.shippingPriceCents,
-          product_data: { name: 'Frete' },
-        },
-      });
+  async createCheckout(
+    providerName: PaymentProviderName | undefined,
+    input: CreateCheckoutInput,
+  ) {
+    const provider = this.resolveProvider(providerName);
+    if (!provider.supportedPaymentMethods.includes(input.paymentMethod)) {
+      throw new BadRequestException(
+        `Forma de pagamento ${input.paymentMethod} não suportada por ${provider.name}`,
+      );
     }
 
-    const session = await this.stripe.checkout.sessions.create({
-      mode: 'payment',
-      payment_method_types: PAYMENT_METHOD_MAP[input.paymentMethod] ?? ['card'],
-      line_items: lineItems,
-      client_reference_id: input.orderId,
-      customer_email: input.payerEmail,
-      success_url: `${ordersPage}?payment=success&orderId=${input.orderId}&session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${ordersPage}?payment=failure&orderId=${input.orderId}`,
-      metadata: { orderId: input.orderId },
-    });
-
-    this.logger.log(`Stripe Checkout Session created: ${session.id} → ${session.url}`);
-    return { sessionId: session.id, checkoutUrl: session.url ?? '' };
+    return provider.createCheckout(input);
   }
 
-  constructEvent(payload: Buffer, signature: string) {
-    const secret = this.config.get<string>('STRIPE_WEBHOOK_SECRET') ?? '';
-    return this.stripe.webhooks.constructEvent(payload, signature, secret);
+  async handleWebhook(providerName: PaymentProviderName, input: PaymentWebhookInput) {
+    const provider = this.resolveProvider(providerName);
+    return provider.handleWebhook(input);
+  }
+
+  getSupportedMethods(providerName?: PaymentProviderName) {
+    return this.resolveProvider(providerName).supportedPaymentMethods;
+  }
+
+  resolveProvider(providerName?: PaymentProviderName) {
+    const resolvedName = providerName ?? this.getDefaultProviderName();
+    const provider = this.providerMap.get(resolvedName);
+    if (!provider) {
+      throw new BadRequestException(`Gateway de pagamento inválido: ${resolvedName}`);
+    }
+    return provider;
+  }
+
+  private getDefaultProviderName(): PaymentProviderName {
+    const configured =
+      (this.config.get<string>('DEFAULT_PAYMENT_PROVIDER') as PaymentProviderName | undefined) ??
+      undefined;
+
+    if (configured && this.providerMap.has(configured)) {
+      return configured;
+    }
+
+    if (this.config.get<string>('STRIPE_SECRET_KEY') && this.providerMap.has('stripe')) {
+      return 'stripe';
+    }
+
+    return 'mercadopago';
   }
 }

@@ -26,6 +26,10 @@ export class CreateOrderDto {
   @Type(() => AddressDto)
   address: AddressDto;
 
+  @IsOptional()
+  @IsIn(['mercadopago', 'stripe'])
+  paymentProvider?: 'mercadopago' | 'stripe';
+
   @IsIn(['pix', 'credit_card', 'boleto'])
   paymentMethod: 'pix' | 'credit_card' | 'boleto';
 

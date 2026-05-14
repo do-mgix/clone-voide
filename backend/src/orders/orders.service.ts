@@ -27,12 +27,14 @@ export class OrdersService {
     const shippingCents = dto.shipping?.priceCents ?? 0;
     const totalCents = subtotalCents + shippingCents;
 
+    const paymentProvider = dto.paymentProvider ?? this.payments.resolveProvider().name;
     const { address, paymentMethod, shipping } = dto;
 
     const order = await this.prisma.order.create({
       data: {
         userId,
         totalCents,
+        paymentProvider,
         paymentMethod,
         status: 'pending',
         shippingServiceId: shipping?.serviceId ?? null,
@@ -66,20 +68,37 @@ export class OrdersService {
 
     await this.prisma.cartItem.deleteMany({ where: { cartId: cart.id } });
 
-    const { sessionId, checkoutUrl } = await this.payments.createCheckoutSession({
+    const checkout = await this.payments.createCheckout(paymentProvider, {
       orderId: order.id,
+      paymentMethod,
       items: order.items,
       payerEmail: userEmail,
-      paymentMethod: dto.paymentMethod,
-      shippingPriceCents: shippingCents,
+      shipping: shipping
+        ? {
+            company: shipping.company,
+            service: shipping.service,
+            priceCents: shipping.priceCents,
+          }
+        : null,
     });
 
     await this.prisma.order.update({
       where: { id: order.id },
-      data: { preferenceId: sessionId },
+      data: {
+        paymentSessionId: checkout.paymentSessionId,
+        preferenceId: checkout.legacyPreferenceId ?? null,
+      },
     });
 
-    return { order, checkoutUrl };
+    return {
+      order: {
+        ...order,
+        paymentProvider,
+        paymentSessionId: checkout.paymentSessionId,
+        preferenceId: checkout.legacyPreferenceId ?? null,
+      },
+      checkoutUrl: checkout.checkoutUrl,
+    };
   }
 
   async getOrders(userId: string) {

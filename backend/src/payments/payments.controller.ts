@@ -1,17 +1,8 @@
-import {
-  BadRequestException,
-  Controller,
-  Headers,
-  HttpCode,
-  Logger,
-  Post,
-  RawBodyRequest,
-  Req,
-} from '@nestjs/common';
+import { Body, Controller, Headers, HttpCode, Logger, Param, Post, Req } from '@nestjs/common';
 import { Request } from 'express';
-import Stripe from 'stripe';
 import { PaymentsService } from './payments.service';
 import { PrismaService } from '../prisma/prisma.service';
+import { PaymentProviderName } from './payment-provider.interface';
 
 @Controller('payments')
 export class PaymentsController {
@@ -22,62 +13,57 @@ export class PaymentsController {
     private readonly prisma: PrismaService,
   ) {}
 
-  @Post('webhook')
+  @Post('webhook/:provider')
   @HttpCode(200)
-  async handleWebhook(
-    @Req() req: RawBodyRequest<Request>,
-    @Headers('stripe-signature') signature?: string,
+  async handleWebhookByProvider(
+    @Param('provider') provider: PaymentProviderName,
+    @Body() body: any,
+    @Headers() headers: Record<string, string | string[] | undefined>,
+    @Req() req: Request & { rawBody?: string },
   ) {
-    if (!signature || !req.rawBody) {
-      throw new BadRequestException('Missing Stripe signature or raw body');
-    }
-
-    let event: Stripe.Event;
-    try {
-      event = this.paymentsService.constructEvent(req.rawBody, signature);
-    } catch (err) {
-      this.logger.error('Stripe webhook signature verification failed', err);
-      throw new BadRequestException('Invalid signature');
-    }
-
-    this.logger.log(`Stripe webhook: ${event.type}`);
-
-    const handled = new Set([
-      'checkout.session.completed',
-      'checkout.session.async_payment_succeeded',
-      'checkout.session.async_payment_failed',
-      'checkout.session.expired',
-    ]);
-
-    if (!handled.has(event.type)) return { received: true };
-
-    const session = event.data.object as Stripe.Checkout.Session;
-    const orderId = session.client_reference_id ?? session.metadata?.orderId;
-    if (!orderId) {
-      this.logger.warn(`Stripe session ${session.id} has no orderId reference`);
-      return { received: true };
-    }
-
-    const orderStatus = this.resolveOrderStatus(event.type, session.payment_status);
-    await this.prisma.order.updateMany({
-      where: { id: orderId },
-      data: { status: orderStatus },
-    });
-    this.logger.log(`Order ${orderId} status → ${orderStatus} (${event.type})`);
-
-    return { received: true };
+    return this.processWebhook(provider, body, headers, req.rawBody);
   }
 
-  private resolveOrderStatus(eventType: string, paymentStatus?: string | null) {
-    if (
-      eventType === 'checkout.session.expired' ||
-      eventType === 'checkout.session.async_payment_failed'
-    ) {
-      return 'cancelled';
+  @Post('webhook')
+  @HttpCode(200)
+  async handleLegacyMercadoPagoWebhook(
+    @Body() body: any,
+    @Headers() headers: Record<string, string | string[] | undefined>,
+    @Req() req: Request & { rawBody?: string },
+  ) {
+    return this.processWebhook('mercadopago', body, headers, req.rawBody);
+  }
+
+  private async processWebhook(
+    provider: PaymentProviderName,
+    body: any,
+    headers: Record<string, string | string[] | undefined>,
+    rawBody?: string,
+  ) {
+    this.logger.log(
+      `Webhook received: provider=${provider} type=${body?.type ?? 'unknown'} action=${body?.action ?? 'unknown'}`,
+    );
+
+    try {
+      const result = await this.paymentsService.handleWebhook(provider, {
+        body,
+        headers,
+        rawBody,
+      });
+
+      if (result.orderId && result.orderStatus) {
+        await this.prisma.order.updateMany({
+          where: { id: result.orderId },
+          data: { status: result.orderStatus },
+        });
+        this.logger.log(
+          `Order ${result.orderId} status → ${result.orderStatus} (${provider}: ${result.providerPaymentId ?? 'n/a'})`,
+        );
+      }
+    } catch (err) {
+      this.logger.error('Webhook processing failed', err);
     }
-    if (paymentStatus === 'paid' || paymentStatus === 'no_payment_required') {
-      return 'confirmed';
-    }
-    return 'pending';
+
+    return { received: true };
   }
 }
