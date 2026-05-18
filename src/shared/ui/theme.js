@@ -2,8 +2,7 @@ const THEME_KEY = 'shopstore-theme';
 
 export function applySavedTheme() {
   const saved = window.localStorage.getItem(THEME_KEY);
-  // Default to dark when no preference has been saved yet
-  if (saved !== 'light') {
+  if (saved === 'dark') {
     document.documentElement.classList.add('dark');
   }
 }

@@ -1,4 +1,5 @@
 import { Injectable, NotFoundException, OnModuleInit } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
 import { Product as ProductModel, Prisma } from '@prisma/client';
 import { PrismaService } from '../prisma/prisma.service';
 import { PRODUCT_SEED_DATA } from './products.seed-data';
@@ -20,9 +21,16 @@ function formatPrice(priceInCents: number) {
 
 @Injectable()
 export class ProductsService implements OnModuleInit {
-  constructor(private readonly prisma: PrismaService) {}
+  constructor(
+    private readonly prisma: PrismaService,
+    private readonly config: ConfigService,
+  ) {}
 
   async onModuleInit() {
+    if (this.config.get<string>('SEED_PRODUCTS_ON_STARTUP') !== 'true') {
+      return;
+    }
+
     await this.prisma.product.createMany({
       data: PRODUCT_SEED_DATA,
       skipDuplicates: true,

@@ -3,5 +3,5 @@ import { bindRevealOnScroll } from '../../../shared/ui/reveal.js';
 
 export function initHomePage() {
   bindProductCardActions();
-  bindRevealOnScroll('.product-card, .cat-card, .test-card');
+  bindRevealOnScroll('.product-card, .category-tab, .promo-panel');
 }

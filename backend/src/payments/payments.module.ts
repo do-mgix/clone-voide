@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { PaymentsController } from './payments.controller';
 import { PaymentsService } from './payments.service';
 import { PrismaModule } from '../prisma/prisma.module';
-import { MercadoPagoPaymentProvider } from './providers/mercado-pago-payment.provider';
+//import { MercadoPagoPaymentProvider } from './providers/mercado-pago-payment.provider';
 import { StripePaymentProvider } from './providers/stripe-payment.provider';
 import { PAYMENT_PROVIDERS } from './payment.constants';
 
@@ -11,15 +11,15 @@ import { PAYMENT_PROVIDERS } from './payment.constants';
   controllers: [PaymentsController],
   providers: [
     PaymentsService,
-    MercadoPagoPaymentProvider,
+ //   MercadoPagoPaymentProvider,
     StripePaymentProvider,
     {
       provide: PAYMENT_PROVIDERS,
       useFactory: (
-        mercadoPago: MercadoPagoPaymentProvider,
+ //       mercadoPago: MercadoPagoPaymentProvider,
         stripe: StripePaymentProvider,
-      ) => [mercadoPago, stripe],
-      inject: [MercadoPagoPaymentProvider, StripePaymentProvider],
+      ) => [ stripe],
+      inject: [ StripePaymentProvider],
     },
   ],
   exports: [PaymentsService],

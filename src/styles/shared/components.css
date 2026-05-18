@@ -270,13 +270,13 @@
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: #050505;
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: #ffffff;
+  border: 1px solid rgba(17, 17, 17, 0.12);
   display: grid;
   place-items: center;
   font-size: 0.9rem;
-  color: var(--text-dark);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.24);
+  color: #111111;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   opacity: 0;
   cursor: pointer;
 }

@@ -32,10 +32,6 @@ html.dark .hero-card-float .card-title {
   color: var(--text-dark);
 }
 
-html.dark .product-fav {
-  background: var(--card-bg);
-}
-
 html.dark .marquee-wrap {
   background: var(--green-soft);
 }
